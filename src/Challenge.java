@@ -54,16 +54,16 @@ public class Challenge {
                     }
                 }
             }
-            if (!redo) {
-                System.out.println(Arrays.toString(newSeats[row]));
-            }
-            else {
+            if (redo) {
                 for (int clear = 0; clear != newSeats[0].length; clear++) {
                     newSeats[row][clear] = null;
                 }
                 row--;
                 redo = false;
             }
+        }
+        for (String[] row: newSeats) {
+            System.out.println(Arrays.toString(row));
         }
     }
 }
